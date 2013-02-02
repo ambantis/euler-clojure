@@ -9,3 +9,17 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 of 3 or 5 below 1000.
 ")
 
+(defn mod-3-5?
+  [n]
+  (or
+   (= 0 (mod n 3))
+   (= 0 (mod n 5))
+   ))
+
+(defn sum-multiples-3-5
+  [ceiling]
+  (let [numbers (range 1 ceiling)]
+    (time (reduce + (filter mod-3-5? numbers)))))
+
+
+  
