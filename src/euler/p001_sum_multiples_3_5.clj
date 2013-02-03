@@ -1,4 +1,4 @@
-(ns net.euler.prob_001)
+(ns euler.p001-sum-multiples-3-5)
 
 (comment
 "
@@ -19,7 +19,4 @@ of 3 or 5 below 1000.
 (defn sum-multiples-3-5
   [ceiling]
   (let [numbers (range 1 ceiling)]
-    (time (reduce + (filter mod-3-5? numbers)))))
-
-
-  
+    (reduce + (filter mod-3-5? numbers))))
